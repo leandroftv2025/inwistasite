@@ -20,67 +20,6 @@ const Expansion = () => {
 
         <div className="relative max-w-6xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
           <div className="relative rounded-3xl overflow-hidden border border-border/50 shadow-2xl">
-            {/* Animated connection lines overlay */}
-            <svg className="absolute inset-0 w-full h-full pointer-events-none z-10" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice">
-              {/* Brazil as central point (South America location) */}
-              <circle cx="280" cy="400" r="8" fill="hsl(185 80% 45%)" className="opacity-90">
-                <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite" />
-                <animate attributeName="opacity" values="0.9;1;0.9" dur="2s" repeatCount="indefinite" />
-              </circle>
-              
-              {/* Connection to North America */}
-              <path d="M 280 400 Q 200 250 150 180" stroke="hsl(185 80% 45%)" strokeWidth="2.5" fill="none" opacity="0" className="connection-line">
-                <animate attributeName="opacity" values="0;0.7;0" dur="4s" repeatCount="indefinite" />
-                <animate attributeName="stroke-dasharray" values="0 500; 250 250; 500 0" dur="4s" repeatCount="indefinite" />
-              </path>
-              
-              {/* Connection to Europe */}
-              <path d="M 280 400 Q 400 300 520 220" stroke="hsl(185 80% 45%)" strokeWidth="2.5" fill="none" opacity="0" className="connection-line">
-                <animate attributeName="opacity" values="0;0.7;0" dur="4.5s" repeatCount="indefinite" begin="0.5s" />
-                <animate attributeName="stroke-dasharray" values="0 500; 250 250; 500 0" dur="4.5s" repeatCount="indefinite" begin="0.5s" />
-              </path>
-              
-              {/* Connection to Africa */}
-              <path d="M 280 400 Q 450 380 580 350" stroke="hsl(185 80% 45%)" strokeWidth="2.5" fill="none" opacity="0" className="connection-line">
-                <animate attributeName="opacity" values="0;0.7;0" dur="5s" repeatCount="indefinite" begin="1s" />
-                <animate attributeName="stroke-dasharray" values="0 500; 250 250; 500 0" dur="5s" repeatCount="indefinite" begin="1s" />
-              </path>
-              
-              {/* Connection to Asia */}
-              <path d="M 280 400 Q 600 300 780 280" stroke="hsl(185 80% 45%)" strokeWidth="2.5" fill="none" opacity="0" className="connection-line">
-                <animate attributeName="opacity" values="0;0.7;0" dur="5.5s" repeatCount="indefinite" begin="1.5s" />
-                <animate attributeName="stroke-dasharray" values="0 600; 300 300; 600 0" dur="5.5s" repeatCount="indefinite" begin="1.5s" />
-              </path>
-              
-              {/* Connection to Oceania */}
-              <path d="M 280 400 Q 650 480 850 450" stroke="hsl(185 80% 45%)" strokeWidth="2.5" fill="none" opacity="0" className="connection-line">
-                <animate attributeName="opacity" values="0;0.7;0" dur="6s" repeatCount="indefinite" begin="2s" />
-                <animate attributeName="stroke-dasharray" values="0 600; 300 300; 600 0" dur="6s" repeatCount="indefinite" begin="2s" />
-              </path>
-              
-              {/* Endpoint dots with pulse and delayed animations */}
-              <circle cx="150" cy="180" r="5" fill="hsl(185 80% 45%)">
-                <animate attributeName="opacity" values="0;1;0" dur="4s" repeatCount="indefinite" />
-                <animate attributeName="r" values="5;7;5" dur="4s" repeatCount="indefinite" />
-              </circle>
-              <circle cx="520" cy="220" r="5" fill="hsl(185 80% 45%)">
-                <animate attributeName="opacity" values="0;1;0" dur="4.5s" repeatCount="indefinite" begin="0.5s" />
-                <animate attributeName="r" values="5;7;5" dur="4.5s" repeatCount="indefinite" begin="0.5s" />
-              </circle>
-              <circle cx="580" cy="350" r="5" fill="hsl(185 80% 45%)">
-                <animate attributeName="opacity" values="0;1;0" dur="5s" repeatCount="indefinite" begin="1s" />
-                <animate attributeName="r" values="5;7;5" dur="5s" repeatCount="indefinite" begin="1s" />
-              </circle>
-              <circle cx="780" cy="280" r="5" fill="hsl(185 80% 45%)">
-                <animate attributeName="opacity" values="0;1;0" dur="5.5s" repeatCount="indefinite" begin="1.5s" />
-                <animate attributeName="r" values="5;7;5" dur="5.5s" repeatCount="indefinite" begin="1.5s" />
-              </circle>
-              <circle cx="850" cy="450" r="5" fill="hsl(185 80% 45%)">
-                <animate attributeName="opacity" values="0;1;0" dur="6s" repeatCount="indefinite" begin="2s" />
-                <animate attributeName="r" values="5;7;5" dur="6s" repeatCount="indefinite" begin="2s" />
-              </circle>
-            </svg>
-            
             <img 
               src={worldMap} 
               alt="Mapa de conexões globais Inwista" 
