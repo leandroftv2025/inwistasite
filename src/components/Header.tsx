@@ -19,7 +19,7 @@ const Header = () => {
             <img 
               src={new URL('@/assets/inwista-logo.png', import.meta.url).href} 
               alt="Inwista" 
-              className="h-8 sm:h-10"
+              className="h-12 sm:h-16"
             />
           </div>
 
