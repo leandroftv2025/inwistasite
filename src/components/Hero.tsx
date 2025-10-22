@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import cardImage from "@/assets/inwista-card.jpg";
+import appMockup from "@/assets/app-mockup.png";
+import cardTurquoise from "@/assets/card-turquoise.png";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
@@ -14,25 +15,25 @@ const Hero = () => {
         backgroundPosition: 'center',
       }}
     >
-      <div className="absolute inset-0 bg-gradient-hero opacity-90"></div>
+      <div className="absolute inset-0 bg-gradient-hero opacity-95"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-left space-y-6 sm:space-y-8 animate-fade-in">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-              <span className="block text-foreground">Cartão de</span>
+              <span className="block text-foreground">Banco Digital</span>
               <span className="block bg-gradient-primary bg-clip-text text-transparent">
-                Pagamento
+                Conectado ao
               </span>
               <span className="block text-foreground text-3xl sm:text-4xl lg:text-5xl mt-2">
-                gaste sem vender seus ativos.
+                Mundo das Criptomoedas
               </span>
             </h1>
             
             <p className="text-lg sm:text-xl text-foreground/80 max-w-2xl leading-relaxed">
-              Transforme seu saldo digital em poder de compra global.
+              Gerencie seus ativos digitais com a facilidade de um banco tradicional.
               <span className="block mt-2 font-medium text-primary">
-                PIX, stablecoin e cartão internacional, tudo em um só lugar.
+                PIX instantâneo, stablecoin e muito mais em um único app.
               </span>
             </p>
             
@@ -41,7 +42,7 @@ const Hero = () => {
                 size="lg"
                 className="bg-gradient-primary hover:opacity-90 transition-all text-base sm:text-lg px-6 sm:px-8 py-6 animate-glow"
               >
-                Comece agora
+                Baixe o app
                 <ArrowRight className="ml-2" size={20} />
               </Button>
               <Button 
@@ -58,11 +59,28 @@ const Hero = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-primary opacity-20 blur-3xl rounded-full"></div>
               <img 
-                src={cardImage} 
-                alt="Cartão Inwista" 
-                className="relative w-full max-w-md lg:max-w-lg drop-shadow-2xl rounded-2xl"
+                src={appMockup} 
+                alt="App Inwista" 
+                className="relative w-full max-w-sm lg:max-w-md drop-shadow-2xl"
               />
             </div>
+          </div>
+        </div>
+
+        {/* Card Section - Secondary Feature */}
+        <div className="mt-16 sm:mt-24 text-center animate-fade-in">
+          <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">
+            + Cartão Internacional Incluso
+          </h3>
+          <p className="text-foreground/70 mb-8 max-w-2xl mx-auto">
+            Gaste sem vender seus ativos. Use seu saldo digital em qualquer lugar do mundo.
+          </p>
+          <div className="flex justify-center">
+            <img 
+              src={cardTurquoise} 
+              alt="Cartão Inwista" 
+              className="w-full max-w-md drop-shadow-2xl rounded-2xl"
+            />
           </div>
         </div>
       </div>
