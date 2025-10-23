@@ -28,12 +28,14 @@ const Expansion = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-8 sm:mt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mt-8 sm:mt-12">
             {[
-              { region: "Brasil", markets: "PIX & Stablecoin" },
               { region: "América Latina", markets: "Expansão Regional" },
+              { region: "América do Norte", markets: "USD & Stablecoin" },
+              { region: "Ásia", markets: "Mercados Asiáticos" },
               { region: "Europa", markets: "SEPA & SWIFT" },
-              { region: "África", markets: "Mercados Emergentes" }
+              { region: "África", markets: "Mercados Emergentes" },
+              { region: "Oceania", markets: "Mercados do Pacífico" }
             ].map((item, index) => (
               <div 
                 key={index}
