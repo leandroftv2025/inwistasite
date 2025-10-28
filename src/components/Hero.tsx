@@ -1,10 +1,12 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import appMockup from "@/assets/app-mockup.png";
-import cardTurquoise from "@/assets/card-turquoise.png";
+import { useLanguage } from "@/contexts/LanguageContext";
+import appMockup from "@/assets/hero-banner.png";
+import cardNew from "@/assets/card-new.png";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
+  const { t } = useLanguage();
   return (
     <section 
       id="hero" 
@@ -21,36 +23,29 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-left space-y-6 sm:space-y-8 animate-fade-in">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-              <span className="block text-foreground">Banco Digital</span>
-              <span className="block bg-gradient-primary bg-clip-text text-transparent">
-                Conectado ao
-              </span>
-              <span className="block text-foreground text-3xl sm:text-4xl lg:text-5xl mt-2">
-                Mundo das Criptomoedas
+              <span className="block bg-gradient-primary bg-clip-text text-transparent hover:scale-105 transition-transform duration-500">
+                {t("hero.title")}
               </span>
             </h1>
             
             <p className="text-lg sm:text-xl text-foreground/80 max-w-2xl leading-relaxed">
-              Gerencie seus ativos digitais com a facilidade de um banco tradicional.
-              <span className="block mt-2 font-medium text-primary">
-                PIX instantâneo, stablecoin e muito mais em um único app.
-              </span>
+              {t("hero.subtitle")}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg"
-                className="bg-gradient-primary hover:opacity-90 transition-all text-base sm:text-lg px-6 sm:px-8 py-6 animate-glow"
+                className="bg-gradient-primary hover:opacity-90 transition-all hover:scale-105 text-base sm:text-lg px-6 sm:px-8 py-6 animate-glow shadow-glow"
               >
-                Baixe o app
+                {t("hero.downloadApp")}
                 <ArrowRight className="ml-2" size={20} />
               </Button>
               <Button 
                 size="lg"
                 variant="outline"
-                className="border-primary text-primary hover:bg-primary/10 text-base sm:text-lg px-6 sm:px-8 py-6"
+                className="border-primary text-primary hover:bg-primary/10 hover:scale-105 transition-all text-base sm:text-lg px-6 sm:px-8 py-6"
               >
-                Saiba mais
+                {t("hero.learnMore")}
               </Button>
             </div>
           </div>
@@ -69,17 +64,17 @@ const Hero = () => {
 
         {/* Card Section - Secondary Feature */}
         <div className="mt-16 sm:mt-24 text-center animate-fade-in">
-          <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">
-            + Cartão Internacional Incluso
+          <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-4 hover:scale-105 transition-transform duration-300">
+            {t("hero.cardTitle")}
           </h3>
           <p className="text-foreground/70 mb-8 max-w-2xl mx-auto">
-            Gaste sem vender seus ativos. Use seu saldo digital em qualquer lugar do mundo.
+            {t("hero.cardDescription")}
           </p>
-          <div className="flex justify-center">
+          <div className="flex justify-center animate-float">
             <img 
-              src={cardTurquoise} 
+              src={cardNew} 
               alt="Cartão Inwista" 
-              className="w-full max-w-md drop-shadow-2xl rounded-2xl"
+              className="w-full max-w-md drop-shadow-2xl hover:scale-105 transition-transform duration-500"
             />
           </div>
         </div>

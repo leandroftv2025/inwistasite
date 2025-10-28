@@ -1,9 +1,18 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sparkles, Download, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { ThemeToggle } from "@/components/ThemeToggle";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -12,95 +21,205 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-xl border-b border-border/50 shadow-lg">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20">
-          <div className="flex items-center space-x-2">
+        <div className="flex items-center justify-between h-20 sm:h-24">
+          {/* Left Side - Logo + Download Button */}
+          <div className="flex items-center space-x-4">
             <img 
               src={new URL('@/assets/inwista-logo.png', import.meta.url).href} 
               alt="Inwista" 
-              className="h-16 sm:h-20 lg:h-24"
+              className="h-20 sm:h-24 lg:h-32 hover:scale-105 transition-transform duration-300"
             />
+            <Button
+              variant="outline"
+              size="sm"
+              className="hidden lg:flex items-center gap-2 hover:scale-105 transition-transform"
+              onClick={() => scrollToSection("hero")}
+            >
+              <Download size={16} />
+              {t("header.download")}
+            </Button>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-6">
             <button
-              onClick={() => scrollToSection("como-funciona")}
-              className="text-foreground/80 hover:text-primary transition-colors"
+              onClick={() => scrollToSection("plataforma")}
+              className="text-foreground/80 hover:text-primary transition-all hover:scale-105 font-medium"
             >
-              Como funciona
+              {t("header.platform")}
             </button>
             <button
               onClick={() => scrollToSection("cartao")}
-              className="text-foreground/80 hover:text-primary transition-colors"
+              className="text-foreground/80 hover:text-primary transition-all hover:scale-105 font-medium"
             >
-              Cartão
+              {t("header.card")}
             </button>
             <button
-              onClick={() => scrollToSection("beneficios")}
-              className="text-foreground/80 hover:text-primary transition-colors"
+              onClick={() => scrollToSection("investimentos")}
+              className="text-foreground/80 hover:text-primary transition-all hover:scale-105 font-medium"
             >
-              Benefícios
+              {t("header.investments")}
             </button>
             <button
               onClick={() => scrollToSection("expansao")}
-              className="text-foreground/80 hover:text-primary transition-colors"
+              className="text-foreground/80 hover:text-primary transition-all hover:scale-105 font-medium"
             >
-              Expansão
+              {t("header.vision")}
             </button>
-            <Button 
-              onClick={() => scrollToSection("hero")}
-              className="bg-gradient-primary hover:opacity-90 transition-opacity"
+            <button
+              onClick={() => scrollToSection("contato")}
+              className="text-foreground/80 hover:text-primary transition-all hover:scale-105 font-medium"
             >
-              Quero meu cartão
-            </Button>
+              {t("header.contact")}
+            </button>
           </nav>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-foreground"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Right Side - Actions */}
+          <div className="flex items-center space-x-2 sm:space-x-3">
+            {/* Theme Toggle */}
+            <ThemeToggle />
+            
+            {/* Language Selector */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="sm" className="gap-2">
+                  <Globe size={16} />
+                  <span className="hidden sm:inline">{language.toUpperCase()}</span>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem onClick={() => setLanguage("pt")}>
+                  🇧🇷 Português
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setLanguage("en")}>
+                  🇺🇸 English
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            {/* Spotlight Button */}
+            <Button
+              variant="ghost"
+              size="sm"
+              className="hidden md:flex items-center gap-2 hover:scale-105 transition-transform"
+            >
+              <Sparkles size={16} className="text-primary" />
+              <span>{t("header.spotlight")}</span>
+            </Button>
+
+            {/* Login Button */}
+            <Button
+              variant="outline"
+              size="sm"
+              className="hover:scale-105 transition-transform"
+              onClick={() => scrollToSection("acesso")}
+            >
+              {t("header.login")}
+            </Button>
+
+            {/* Get Card Button */}
+            <Button 
+              onClick={() => scrollToSection("hero")}
+              className="hidden sm:flex bg-gradient-primary hover:opacity-90 transition-all hover:scale-105 shadow-glow"
+              size="sm"
+            >
+              {t("header.getCard")}
+            </Button>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="lg:hidden text-foreground p-2"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-card/95 backdrop-blur-xl border-t border-border/50">
-          <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-            <button
-              onClick={() => scrollToSection("como-funciona")}
-              className="text-foreground/80 hover:text-primary transition-colors text-left"
+        <div className="lg:hidden bg-card/95 backdrop-blur-xl border-t border-border/50 animate-fade-in">
+          <nav className="container mx-auto px-4 py-6 flex flex-col space-y-4">
+            <Button
+              variant="outline"
+              size="sm"
+              className="flex items-center gap-2 justify-start"
+              onClick={() => {
+                scrollToSection("hero");
+                setIsMenuOpen(false);
+              }}
             >
-              Como funciona
+              <Download size={16} />
+              {t("header.download")}
+            </Button>
+            
+            <button
+              onClick={() => scrollToSection("plataforma")}
+              className="text-foreground/80 hover:text-primary transition-colors text-left font-medium"
+            >
+              {t("header.platform")}
             </button>
             <button
               onClick={() => scrollToSection("cartao")}
-              className="text-foreground/80 hover:text-primary transition-colors text-left"
+              className="text-foreground/80 hover:text-primary transition-colors text-left font-medium"
             >
-              Cartão
+              {t("header.card")}
             </button>
             <button
-              onClick={() => scrollToSection("beneficios")}
-              className="text-foreground/80 hover:text-primary transition-colors text-left"
+              onClick={() => scrollToSection("investimentos")}
+              className="text-foreground/80 hover:text-primary transition-colors text-left font-medium"
             >
-              Benefícios
+              {t("header.investments")}
             </button>
             <button
               onClick={() => scrollToSection("expansao")}
-              className="text-foreground/80 hover:text-primary transition-colors text-left"
+              className="text-foreground/80 hover:text-primary transition-colors text-left font-medium"
             >
-              Expansão
+              {t("header.vision")}
             </button>
-            <Button 
-              onClick={() => scrollToSection("hero")}
-              className="bg-gradient-primary hover:opacity-90 transition-opacity w-full"
+            <button
+              onClick={() => scrollToSection("contato")}
+              className="text-foreground/80 hover:text-primary transition-colors text-left font-medium"
             >
-              Quero meu cartão
-            </Button>
+              {t("header.contact")}
+            </button>
+
+            <div className="pt-4 border-t border-border/50 space-y-3">
+              <Button
+                variant="ghost"
+                size="sm"
+                className="w-full justify-start gap-2"
+              >
+                <Sparkles size={16} className="text-primary" />
+                {t("header.spotlight")}
+              </Button>
+              
+              <Button
+                variant="outline"
+                size="sm"
+                className="w-full"
+                onClick={() => {
+                  scrollToSection("acesso");
+                  setIsMenuOpen(false);
+                }}
+              >
+                {t("header.login")}
+              </Button>
+
+              <Button 
+                onClick={() => {
+                  scrollToSection("hero");
+                  setIsMenuOpen(false);
+                }}
+                className="w-full bg-gradient-primary hover:opacity-90 transition-opacity"
+                size="sm"
+              >
+                {t("header.getCard")}
+              </Button>
+            </div>
           </nav>
         </div>
       )}
