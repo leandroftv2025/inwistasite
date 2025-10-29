@@ -31,8 +31,8 @@ const translations = {
     "hero.cardDescription": "Utilize em qualquer lugar do mundo com diversos ativos financeiros. Cripto, fiat e muito mais.",
     
     // Platform
-    "platform.title": "Como Funciona Nossa Plataforma",
-    "platform.subtitle": "Gerencie seus ativos digitais de forma simples e segura",
+    "platform.title": "Você não precisa vender seus ativos para usar",
+    "platform.subtitle": "Use seu cartão internacional com diversos ativos financeiros",
     "platform.feature1": "Painel Intuitivo",
     "platform.feature1Desc": "Interface moderna e fácil de usar",
     "platform.feature2": "Múltiplos Ativos",
@@ -96,8 +96,8 @@ const translations = {
     "hero.cardDescription": "Use anywhere in the world with various financial assets. Crypto, fiat and much more.",
     
     // Platform
-    "platform.title": "How Our Platform Works",
-    "platform.subtitle": "Manage your digital assets simply and securely",
+    "platform.title": "You don't need to sell your assets to use them",
+    "platform.subtitle": "Use your international card with various financial assets",
     "platform.feature1": "Intuitive Dashboard",
     "platform.feature1Desc": "Modern and easy-to-use interface",
     "platform.feature2": "Multiple Assets",

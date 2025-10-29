@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-import cardPremium from "@/assets/card-premium.png";
+import appMockup from "@/assets/app-mockup.png";
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -64,9 +64,9 @@ const Hero = () => {
               <div className="absolute -inset-4 bg-gradient-primary opacity-30 blur-3xl rounded-3xl"></div>
               <div className="relative transform hover:scale-105 transition-transform duration-700">
                 <img 
-                  src={cardPremium} 
-                  alt="Cartão Inwista Premium" 
-                  className="relative w-full max-w-md lg:max-w-lg drop-shadow-[0_35px_60px_rgba(0,0,0,0.7)] rounded-2xl"
+                  src={appMockup} 
+                  alt="Inwista App" 
+                  className="relative w-full max-w-md lg:max-w-lg drop-shadow-[0_35px_60px_rgba(0,0,0,0.7)]"
                 />
               </div>
             </div>
