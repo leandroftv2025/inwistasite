@@ -23,8 +23,8 @@ const translations = {
     "header.getCard": "Quero meu cartão",
     
     // Hero
-    "hero.title": "Transforme seu saldo digital em poder de compra global",
-    "hero.subtitle": "PIX, stablecoin e cartão internacional tudo em um só lugar. Gaste sem vender seus ativos.",
+    "hero.title": "Banco Digital Conectado ao Mundo das Criptomoedas",
+    "hero.subtitle": "A plataforma completa para gestão de investimentos, cartão internacional e acesso ao mercado cripto. Tudo em um só lugar.",
     "hero.downloadApp": "Baixe o app",
     "hero.learnMore": "Saiba mais",
     "hero.cardTitle": "Cartão Internacional Inwista",
@@ -88,8 +88,8 @@ const translations = {
     "header.getCard": "Get my card",
     
     // Hero
-    "hero.title": "Transform your digital balance into global purchasing power",
-    "hero.subtitle": "PIX, stablecoin and international card all in one place. Spend without selling your assets.",
+    "hero.title": "Digital Bank Connected to the World of Cryptocurrencies",
+    "hero.subtitle": "The complete platform for investment management, international card and crypto market access. All in one place.",
     "hero.downloadApp": "Download app",
     "hero.learnMore": "Learn more",
     "hero.cardTitle": "Inwista International Card",

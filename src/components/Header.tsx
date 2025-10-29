@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Sparkles, Download, Globe } from "lucide-react";
+import { Menu, X, Download, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -78,9 +78,6 @@ const Header = () => {
 
           {/* Right Side - Actions */}
           <div className="flex items-center space-x-2 sm:space-x-3">
-            {/* Theme Toggle */}
-            <ThemeToggle />
-            
             {/* Language Selector */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -99,15 +96,10 @@ const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            {/* Spotlight Button */}
-            <Button
-              variant="ghost"
-              size="sm"
-              className="hidden md:flex items-center gap-2 hover:scale-105 transition-transform"
-            >
-              <Sparkles size={16} className="text-primary" />
-              <span>{t("header.spotlight")}</span>
-            </Button>
+            {/* Spotlight Button - Theme Toggle */}
+            <div className="hidden md:block">
+              <ThemeToggle />
+            </div>
 
             {/* Login Button */}
             <Button
@@ -188,14 +180,9 @@ const Header = () => {
             </button>
 
             <div className="pt-4 border-t border-border/50 space-y-3">
-              <Button
-                variant="ghost"
-                size="sm"
-                className="w-full justify-start gap-2"
-              >
-                <Sparkles size={16} className="text-primary" />
-                {t("header.spotlight")}
-              </Button>
+              <div className="w-full">
+                <ThemeToggle />
+              </div>
               
               <Button
                 variant="outline"
