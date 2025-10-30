@@ -18,9 +18,9 @@ const translations = {
     "header.contact": "Contato",
     "header.access": "Acesso",
     "header.spotlight": "Spotlight",
-    "header.login": "Entrar",
+    "header.login": "Acessar Conta",
     "header.download": "Baixar App",
-    "header.getCard": "Quero meu cartão",
+    "header.getCard": "Criar Conta",
     
     // Hero
     "hero.title": "Banco Digital Conectado ao Mundo das Criptomoedas",
@@ -33,12 +33,13 @@ const translations = {
     // Platform
     "platform.title": "Você não precisa vender seus ativos para usar",
     "platform.subtitle": "Use seu cartão internacional com diversos ativos financeiros",
-    "platform.feature1": "Painel Intuitivo",
-    "platform.feature1Desc": "Interface moderna e fácil de usar",
-    "platform.feature2": "Múltiplos Ativos",
-    "platform.feature2Desc": "Suporte para crypto e fiat",
-    "platform.feature3": "Segurança 24/7",
-    "platform.feature3Desc": "Monitoramento constante",
+    "platform.getCard": "Quero meu cartão",
+    "platform.benefit1": "Agilidade no Pagamento",
+    "platform.benefit1Desc": "Pague instantaneamente sem conversões",
+    "platform.benefit2": "Economia com Spread",
+    "platform.benefit2Desc": "Evite taxas de conversão abusivas",
+    "platform.benefit3": "Sem Conversão",
+    "platform.benefit3Desc": "Use suas criptomoedas diretamente",
     
     // Investments
     "investments.title": "Não Deixe Seu Dinheiro Parado",
@@ -83,9 +84,9 @@ const translations = {
     "header.contact": "Contact",
     "header.access": "Access",
     "header.spotlight": "Spotlight",
-    "header.login": "Login",
+    "header.login": "Access Account",
     "header.download": "Download App",
-    "header.getCard": "Get my card",
+    "header.getCard": "Create Account",
     
     // Hero
     "hero.title": "Digital Bank Connected to the World of Cryptocurrencies",
@@ -98,12 +99,13 @@ const translations = {
     // Platform
     "platform.title": "You don't need to sell your assets to use them",
     "platform.subtitle": "Use your international card with various financial assets",
-    "platform.feature1": "Intuitive Dashboard",
-    "platform.feature1Desc": "Modern and easy-to-use interface",
-    "platform.feature2": "Multiple Assets",
-    "platform.feature2Desc": "Support for crypto and fiat",
-    "platform.feature3": "24/7 Security",
-    "platform.feature3Desc": "Constant monitoring",
+    "platform.getCard": "Get my card",
+    "platform.benefit1": "Payment Agility",
+    "platform.benefit1Desc": "Pay instantly without conversions",
+    "platform.benefit2": "Spread Savings",
+    "platform.benefit2Desc": "Avoid abusive conversion fees",
+    "platform.benefit3": "No Conversion",
+    "platform.benefit3Desc": "Use your cryptocurrencies directly",
     
     // Investments
     "investments.title": "Don't Let Your Money Sit Idle",
