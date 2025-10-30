@@ -28,10 +28,10 @@ const Platform = () => {
     <section id="plataforma" className="py-24 bg-card">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-white dark:text-white">
             {t("platform.title")}
           </h2>
-          <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
+          <p className="text-lg text-white/80 dark:text-white/80 max-w-2xl mx-auto">
             {t("platform.subtitle")}
           </p>
         </div>
@@ -54,7 +54,7 @@ const Platform = () => {
               <div className="flex justify-center mt-8">
                 <Button 
                   size="lg"
-                  className="group bg-gradient-primary hover:opacity-90 transition-all hover:scale-105 text-base px-8 py-6 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)] hover:shadow-glow"
+                  className="group bg-gradient-primary hover:bg-[hsl(var(--turquoise-neon))] dark:hover:bg-white dark:hover:text-primary transition-all hover:scale-105 text-base px-8 py-6 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)] hover:shadow-glow"
                 >
                   {t("platform.getCard")}
                 </Button>
@@ -69,18 +69,18 @@ const Platform = () => {
               return (
                 <div 
                   key={index}
-                  className="flex gap-4 p-6 rounded-xl bg-background/50 backdrop-blur-sm border border-primary/10 hover:border-primary/30 transition-all hover:scale-105"
+                  className="flex gap-4 p-6 rounded-xl bg-background/50 backdrop-blur-sm border border-primary/10 hover:border-[hsl(var(--turquoise-neon))] dark:hover:border-white transition-all hover:scale-105 group"
                 >
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center">
-                      <Icon className="w-6 h-6 text-primary-foreground" />
+                    <div className="w-12 h-12 rounded-lg bg-primary dark:bg-[hsl(var(--turquoise-neon))] flex items-center justify-center group-hover:bg-[hsl(var(--turquoise-neon))] dark:group-hover:bg-white transition-all">
+                      <Icon className="w-6 h-6 text-white dark:text-primary group-hover:text-white dark:group-hover:text-primary transition-all" />
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2 text-foreground">
+                    <h3 className="text-xl font-semibold mb-2 text-white dark:text-white">
                       {benefit.title}
                     </h3>
-                    <p className="text-foreground/70">
+                    <p className="text-white/80 dark:text-white/80">
                       {benefit.description}
                     </p>
                   </div>

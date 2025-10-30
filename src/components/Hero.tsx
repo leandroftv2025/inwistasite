@@ -1,7 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-import appMockup from "@/assets/app-mockup.png";
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -30,10 +29,8 @@ const Hero = () => {
               <span className="text-sm font-semibold text-primary">Premium Banking Experience</span>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight">
-              <span className="block bg-gradient-primary bg-clip-text text-transparent">
-                {t("hero.title")}
-              </span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight text-white">
+              {t("hero.title")}
             </h1>
             
             <p className="text-lg sm:text-xl text-foreground/70 max-w-2xl leading-relaxed font-light">
@@ -43,7 +40,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
               <Button 
                 size="lg"
-                className="group bg-gradient-primary hover:opacity-90 transition-all hover:scale-105 text-base sm:text-lg px-8 py-7 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)] hover:shadow-glow"
+                className="group bg-gradient-primary hover:opacity-90 hover:bg-[hsl(var(--turquoise-neon))] transition-all hover:scale-105 text-base sm:text-lg px-8 py-7 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)] hover:shadow-glow"
               >
                 {t("hero.downloadApp")}
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
@@ -51,7 +48,7 @@ const Hero = () => {
               <Button 
                 size="lg"
                 variant="outline"
-                className="border-2 border-primary/30 text-foreground hover:bg-primary/5 hover:border-primary hover:scale-105 transition-all text-base sm:text-lg px-8 py-7 backdrop-blur-sm"
+                className="border-2 border-primary/30 text-white hover:bg-[hsl(var(--turquoise-neon))] hover:border-[hsl(var(--turquoise-neon))] hover:text-white hover:scale-105 transition-all text-base sm:text-lg px-8 py-7 backdrop-blur-sm"
               >
                 {t("hero.learnMore")}
               </Button>
@@ -66,19 +63,6 @@ const Hero = () => {
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
                 <span>180+ Countries</span>
-              </div>
-            </div>
-          </div>
-          
-          <div className="relative flex justify-center lg:justify-end animate-float">
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-primary opacity-30 blur-3xl rounded-3xl"></div>
-              <div className="relative transform hover:scale-105 transition-transform duration-700">
-                <img 
-                  src={appMockup} 
-                  alt="Inwista App" 
-                  className="relative w-full max-w-md lg:max-w-lg drop-shadow-[0_35px_60px_rgba(0,0,0,0.7)]"
-                />
               </div>
             </div>
           </div>

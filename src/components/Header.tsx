@@ -46,31 +46,31 @@ const Header = () => {
           <nav className="hidden lg:flex items-center space-x-6">
             <button
               onClick={() => scrollToSection("plataforma")}
-              className="text-foreground/80 hover:text-primary transition-all hover:scale-105 font-medium"
+              className="text-foreground/80 hover:text-[hsl(var(--turquoise-neon))] dark:hover:text-white transition-all hover:scale-105 font-medium"
             >
               {t("header.platform")}
             </button>
             <button
               onClick={() => scrollToSection("cartao")}
-              className="text-foreground/80 hover:text-primary transition-all hover:scale-105 font-medium"
+              className="text-foreground/80 hover:text-[hsl(var(--turquoise-neon))] dark:hover:text-white transition-all hover:scale-105 font-medium"
             >
               {t("header.card")}
             </button>
             <button
               onClick={() => scrollToSection("investimentos")}
-              className="text-foreground/80 hover:text-primary transition-all hover:scale-105 font-medium"
+              className="text-foreground/80 hover:text-[hsl(var(--turquoise-neon))] dark:hover:text-white transition-all hover:scale-105 font-medium"
             >
               {t("header.investments")}
             </button>
             <button
               onClick={() => scrollToSection("expansao")}
-              className="text-foreground/80 hover:text-primary transition-all hover:scale-105 font-medium"
+              className="text-foreground/80 hover:text-[hsl(var(--turquoise-neon))] dark:hover:text-white transition-all hover:scale-105 font-medium"
             >
               {t("header.vision")}
             </button>
             <button
               onClick={() => scrollToSection("contato")}
-              className="text-foreground/80 hover:text-primary transition-all hover:scale-105 font-medium"
+              className="text-foreground/80 hover:text-[hsl(var(--turquoise-neon))] dark:hover:text-white transition-all hover:scale-105 font-medium"
             >
               {t("header.contact")}
             </button>
@@ -105,7 +105,7 @@ const Header = () => {
             <Button
               variant="outline"
               size="sm"
-              className="hover:scale-105 transition-transform"
+              className="hover:scale-105 transition-transform hover:bg-[hsl(var(--turquoise-neon))] hover:text-white dark:hover:bg-white dark:hover:text-primary hover:border-[hsl(var(--turquoise-neon))] dark:hover:border-white"
               onClick={() => scrollToSection("acesso")}
             >
               {t("header.login")}
@@ -114,7 +114,7 @@ const Header = () => {
             {/* Get Card Button */}
             <Button 
               onClick={() => scrollToSection("hero")}
-              className="hidden sm:flex bg-gradient-primary hover:opacity-90 transition-all hover:scale-105 shadow-glow"
+              className="hidden sm:flex bg-gradient-primary hover:bg-[hsl(var(--turquoise-neon))] dark:hover:bg-white dark:hover:text-primary transition-all hover:scale-105 shadow-glow"
               size="sm"
             >
               {t("header.getCard")}
@@ -150,31 +150,31 @@ const Header = () => {
             
             <button
               onClick={() => scrollToSection("plataforma")}
-              className="text-foreground/80 hover:text-primary transition-colors text-left font-medium"
+              className="text-foreground/80 hover:text-[hsl(var(--turquoise-neon))] dark:hover:text-white transition-colors text-left font-medium"
             >
               {t("header.platform")}
             </button>
             <button
               onClick={() => scrollToSection("cartao")}
-              className="text-foreground/80 hover:text-primary transition-colors text-left font-medium"
+              className="text-foreground/80 hover:text-[hsl(var(--turquoise-neon))] dark:hover:text-white transition-colors text-left font-medium"
             >
               {t("header.card")}
             </button>
             <button
               onClick={() => scrollToSection("investimentos")}
-              className="text-foreground/80 hover:text-primary transition-colors text-left font-medium"
+              className="text-foreground/80 hover:text-[hsl(var(--turquoise-neon))] dark:hover:text-white transition-colors text-left font-medium"
             >
               {t("header.investments")}
             </button>
             <button
               onClick={() => scrollToSection("expansao")}
-              className="text-foreground/80 hover:text-primary transition-colors text-left font-medium"
+              className="text-foreground/80 hover:text-[hsl(var(--turquoise-neon))] dark:hover:text-white transition-colors text-left font-medium"
             >
               {t("header.vision")}
             </button>
             <button
               onClick={() => scrollToSection("contato")}
-              className="text-foreground/80 hover:text-primary transition-colors text-left font-medium"
+              className="text-foreground/80 hover:text-[hsl(var(--turquoise-neon))] dark:hover:text-white transition-colors text-left font-medium"
             >
               {t("header.contact")}
             </button>
@@ -187,7 +187,7 @@ const Header = () => {
               <Button
                 variant="outline"
                 size="sm"
-                className="w-full"
+                className="w-full hover:bg-[hsl(var(--turquoise-neon))] hover:text-white dark:hover:bg-white dark:hover:text-primary hover:border-[hsl(var(--turquoise-neon))] dark:hover:border-white"
                 onClick={() => {
                   scrollToSection("acesso");
                   setIsMenuOpen(false);
@@ -201,7 +201,7 @@ const Header = () => {
                   scrollToSection("hero");
                   setIsMenuOpen(false);
                 }}
-                className="w-full bg-gradient-primary hover:opacity-90 transition-opacity"
+                className="w-full bg-gradient-primary hover:bg-[hsl(var(--turquoise-neon))] dark:hover:bg-white dark:hover:text-primary transition-all"
                 size="sm"
               >
                 {t("header.getCard")}
