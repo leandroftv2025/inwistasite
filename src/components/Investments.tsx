@@ -29,10 +29,10 @@ const Investments = () => {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-foreground dark:text-white">
             {t("investments.title")}
           </h2>
-          <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
+          <p className="text-lg text-foreground dark:text-white max-w-2xl mx-auto">
             {t("investments.subtitle")}
           </p>
         </div>
@@ -44,11 +44,11 @@ const Investments = () => {
               className="bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-border/50 hover:border-primary/50 transition-all duration-300 hover:scale-105 hover:shadow-glow animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="bg-gradient-primary p-3 rounded-xl w-fit mb-4">
-                <feature.icon className="w-8 h-8 text-primary-foreground" />
+              <div className="bg-primary dark:bg-[hsl(var(--turquoise-neon))] p-3 rounded-xl w-fit mb-4">
+                <feature.icon className="w-8 h-8 text-white dark:text-primary" />
               </div>
-              <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-              <p className="text-foreground/70">{feature.description}</p>
+              <h3 className="text-xl font-bold mb-3 text-foreground dark:text-white">{feature.title}</h3>
+              <p className="text-foreground dark:text-white">{feature.description}</p>
             </div>
           ))}
         </div>
@@ -56,7 +56,7 @@ const Investments = () => {
         <div className="text-center animate-fade-in">
           <Button
             size="lg"
-            className="bg-gradient-primary hover:opacity-90 transition-all hover:scale-105 shadow-glow"
+            className="bg-primary dark:bg-[hsl(var(--turquoise-neon))] hover:bg-[hsl(var(--turquoise-neon))] dark:hover:bg-white text-white dark:text-primary dark:hover:text-primary transition-all hover:scale-105 shadow-glow"
           >
             {t("hero.learnMore")}
           </Button>

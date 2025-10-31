@@ -27,11 +27,11 @@ const Platform = () => {
   return (
     <section id="plataforma" className="py-24 bg-card">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-white dark:text-white">
+        <div className="text-center mb-8 animate-fade-in">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-primary dark:text-white">
             {t("platform.title")}
           </h2>
-          <p className="text-lg text-white/80 dark:text-white/80 max-w-2xl mx-auto">
+          <p className="text-lg text-foreground dark:text-white max-w-2xl mx-auto">
             {t("platform.subtitle")}
           </p>
         </div>

@@ -48,7 +48,7 @@ const Hero = () => {
               <Button 
                 size="lg"
                 variant="outline"
-                className="border-2 border-primary/30 text-white hover:bg-[hsl(var(--turquoise-neon))] hover:border-[hsl(var(--turquoise-neon))] hover:text-white hover:scale-105 transition-all text-base sm:text-lg px-8 py-7 backdrop-blur-sm"
+                className="border-2 border-primary text-primary dark:border-[hsl(var(--turquoise-neon))] dark:text-white hover:bg-[hsl(var(--turquoise-neon))] hover:border-[hsl(var(--turquoise-neon))] hover:text-white dark:hover:bg-white dark:hover:text-primary dark:hover:border-white hover:scale-105 transition-all text-base sm:text-lg px-8 py-7 backdrop-blur-sm"
               >
                 {t("hero.learnMore")}
               </Button>
