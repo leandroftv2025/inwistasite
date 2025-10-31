@@ -45,10 +45,10 @@ const HowItWorks = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16 sm:mb-20 animate-fade-in">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
-            Como <span className="bg-gradient-primary bg-clip-text text-transparent">Funciona</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-foreground dark:text-white">
+            Como <span className="text-primary dark:text-[hsl(var(--turquoise-neon))]">Funciona</span>
           </h2>
-          <p className="text-lg sm:text-xl text-foreground/70 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-foreground dark:text-white max-w-3xl mx-auto">
             Um fluxo simples e seguro que conecta o sistema financeiro tradicional com o futuro digital
           </p>
         </div>
@@ -56,20 +56,20 @@ const HowItWorks = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-4 relative">
           {steps.map((step, index) => (
             <div key={index} className="relative group animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
-              <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-6 h-full hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
+                <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-6 h-full hover:border-[hsl(var(--turquoise-neon))] dark:hover:border-white transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
                 <div className="flex flex-col items-start space-y-4">
                   <div className="flex items-center justify-between w-full">
-                    <div className="bg-gradient-primary p-3 rounded-xl">
-                      <step.icon className="w-6 h-6 text-background" />
+                    <div className="bg-primary dark:bg-[hsl(var(--turquoise-neon))] p-3 rounded-xl group-hover:bg-[hsl(var(--turquoise-neon))] dark:group-hover:bg-white transition-all">
+                      <step.icon className="w-6 h-6 text-white dark:text-primary group-hover:text-white dark:group-hover:text-primary transition-colors" />
                     </div>
-                    <span className="text-4xl font-bold text-primary/20">{step.number}</span>
+                    <span className="text-4xl font-bold text-primary/20 dark:text-[hsl(var(--turquoise-neon))]/20">{step.number}</span>
                   </div>
                   
-                  <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
+                  <h3 className="text-xl font-semibold text-foreground dark:text-white group-hover:text-[hsl(var(--turquoise-neon))] dark:group-hover:text-[hsl(var(--turquoise-neon))] transition-colors">
                     {step.title}
                   </h3>
                   
-                  <p className="text-foreground/70 text-sm leading-relaxed">
+                  <p className="text-foreground dark:text-white text-sm leading-relaxed">
                     {step.description}
                   </p>
                 </div>

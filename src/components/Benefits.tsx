@@ -29,10 +29,10 @@ const Benefits = () => {
     <section id="beneficios" className="py-20 sm:py-32 bg-gradient-to-b from-background to-card/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 sm:mb-20 animate-fade-in">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
-            Por que <span className="bg-gradient-primary bg-clip-text text-transparent">Inwista</span>?
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-foreground dark:text-white">
+            Por que <span className="text-primary dark:text-[hsl(var(--turquoise-neon))]">Inwista</span>?
           </h2>
-          <p className="text-lg sm:text-xl text-foreground/70 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-foreground dark:text-white max-w-3xl mx-auto">
             Tecnologia de ponta para oferecer a melhor experiência financeira digital
           </p>
         </div>
@@ -45,15 +45,15 @@ const Benefits = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex flex-col space-y-4">
-                <div className="bg-gradient-primary p-4 rounded-2xl w-fit group-hover:scale-110 transition-transform duration-300">
-                  <benefit.icon className="w-8 h-8 text-background" />
+                <div className="bg-primary dark:bg-[hsl(var(--turquoise-neon))] p-4 rounded-2xl w-fit group-hover:scale-110 group-hover:bg-[hsl(var(--turquoise-neon))] dark:group-hover:bg-white transition-all duration-300">
+                  <benefit.icon className="w-8 h-8 text-white dark:text-primary group-hover:text-white dark:group-hover:text-primary transition-colors" />
                 </div>
                 
-                <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
+                <h3 className="text-2xl font-bold text-foreground dark:text-white group-hover:text-[hsl(var(--turquoise-neon))] dark:group-hover:text-[hsl(var(--turquoise-neon))] transition-colors">
                   {benefit.title}
                 </h3>
                 
-                <p className="text-foreground/70 leading-relaxed">
+                <p className="text-foreground dark:text-white leading-relaxed">
                   {benefit.description}
                 </p>
               </div>

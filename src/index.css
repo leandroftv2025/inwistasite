@@ -9,10 +9,10 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 220 25% 10%;
+    --foreground: 198 53% 18%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 25% 10%;
+    --card-foreground: 198 53% 18%;
 
     --popover: 0 0% 100%;
     --popover-foreground: 220 25% 10%;
@@ -62,10 +62,10 @@ All colors MUST be HSL.
 
   .dark {
     --background: 198 53% 18%;
-    --foreground: 0 0% 98%;
+    --foreground: 0 0% 100%;
 
     --card: 198 50% 20%;
-    --card-foreground: 0 0% 98%;
+    --card-foreground: 0 0% 100%;
 
     --popover: 198 55% 15%;
     --popover-foreground: 0 0% 98%;
