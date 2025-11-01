@@ -25,7 +25,7 @@ const Platform = () => {
   ];
 
   return (
-    <section id="plataforma" className="py-24 bg-card">
+    <section id="plataforma" className="pt-8 pb-24 bg-card">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 animate-fade-in">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-primary dark:text-white">

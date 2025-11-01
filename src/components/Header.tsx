@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Download, Globe } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { ThemeToggle } from "@/components/ThemeToggle";
@@ -24,22 +24,18 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-xl border-b border-border/50 shadow-lg">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 sm:h-24">
-          {/* Left Side - Logo + Download Button */}
-          <div className="flex items-center space-x-4">
+          {/* Left Side - Logo */}
+          <div className="flex items-center">
+            <img 
+              src={new URL('@/assets/inwista-logo-blue.png', import.meta.url).href} 
+              alt="Inwista" 
+              className="h-20 sm:h-24 lg:h-32 hover:scale-105 transition-transform duration-300 dark:hidden"
+            />
             <img 
               src={new URL('@/assets/inwista-logo.png', import.meta.url).href} 
               alt="Inwista" 
-              className="h-20 sm:h-24 lg:h-32 hover:scale-105 transition-transform duration-300"
+              className="h-20 sm:h-24 lg:h-32 hover:scale-105 transition-transform duration-300 hidden dark:block"
             />
-            <Button
-              variant="outline"
-              size="sm"
-              className="hidden lg:flex items-center gap-2 hover:scale-105 transition-transform"
-              onClick={() => scrollToSection("hero")}
-            >
-              <Download size={16} />
-              {t("header.download")}
-            </Button>
           </div>
 
           {/* Desktop Navigation */}
@@ -111,15 +107,6 @@ const Header = () => {
               {t("header.login")}
             </Button>
 
-            {/* Get Card Button */}
-            <Button 
-              onClick={() => scrollToSection("hero")}
-              className="hidden sm:flex bg-gradient-primary hover:bg-[hsl(var(--turquoise-neon))] dark:hover:bg-white dark:hover:text-primary transition-all hover:scale-105 shadow-glow"
-              size="sm"
-            >
-              {t("header.getCard")}
-            </Button>
-
             {/* Mobile Menu Button */}
             <button
               className="lg:hidden text-foreground p-2"
@@ -135,19 +122,6 @@ const Header = () => {
       {isMenuOpen && (
         <div className="lg:hidden bg-card/95 backdrop-blur-xl border-t border-border/50 animate-fade-in">
           <nav className="container mx-auto px-4 py-6 flex flex-col space-y-4">
-            <Button
-              variant="outline"
-              size="sm"
-              className="flex items-center gap-2 justify-start"
-              onClick={() => {
-                scrollToSection("hero");
-                setIsMenuOpen(false);
-              }}
-            >
-              <Download size={16} />
-              {t("header.download")}
-            </Button>
-            
             <button
               onClick={() => scrollToSection("plataforma")}
               className="text-foreground/80 hover:text-[hsl(var(--turquoise-neon))] dark:hover:text-white transition-colors text-left font-medium"
@@ -194,17 +168,6 @@ const Header = () => {
                 }}
               >
                 {t("header.login")}
-              </Button>
-
-              <Button 
-                onClick={() => {
-                  scrollToSection("hero");
-                  setIsMenuOpen(false);
-                }}
-                className="w-full bg-gradient-primary hover:bg-[hsl(var(--turquoise-neon))] dark:hover:bg-white dark:hover:text-primary transition-all"
-                size="sm"
-              >
-                {t("header.getCard")}
               </Button>
             </div>
           </nav>
