@@ -24,8 +24,8 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-xl border-b border-border/50 shadow-lg">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 sm:h-24">
-          {/* Left Side - Logo + Theme Toggle */}
-          <div className="flex items-center gap-3">
+          {/* Left Side - Logo */}
+          <div className="flex items-center">
             <img 
               src={new URL('@/assets/inwista-logo-blue.png', import.meta.url).href} 
               alt="Inwista" 
@@ -36,7 +36,6 @@ const Header = () => {
               alt="Inwista" 
               className="h-16 sm:h-20 hover:scale-105 transition-transform duration-300 hidden dark:block"
             />
-            <ThemeToggle />
           </div>
 
           {/* Desktop Navigation */}
@@ -75,6 +74,9 @@ const Header = () => {
 
           {/* Right Side - Actions */}
           <div className="flex items-center space-x-2 sm:space-x-3">
+            {/* Theme Toggle */}
+            <ThemeToggle />
+            
             {/* Language Selector */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
