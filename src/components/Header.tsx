@@ -24,18 +24,19 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-xl border-b border-border/50 shadow-lg">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 sm:h-24">
-          {/* Left Side - Logo */}
-          <div className="flex items-center">
+          {/* Left Side - Logo + Theme Toggle */}
+          <div className="flex items-center gap-3">
             <img 
               src={new URL('@/assets/inwista-logo-blue.png', import.meta.url).href} 
               alt="Inwista" 
-              className="h-20 sm:h-24 lg:h-32 hover:scale-105 transition-transform duration-300 dark:hidden"
+              className="h-16 sm:h-20 hover:scale-105 transition-transform duration-300 dark:hidden"
             />
             <img 
               src={new URL('@/assets/inwista-logo.png', import.meta.url).href} 
               alt="Inwista" 
-              className="h-20 sm:h-24 lg:h-32 hover:scale-105 transition-transform duration-300 hidden dark:block"
+              className="h-16 sm:h-20 hover:scale-105 transition-transform duration-300 hidden dark:block"
             />
+            <ThemeToggle />
           </div>
 
           {/* Desktop Navigation */}
@@ -91,11 +92,6 @@ const Header = () => {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-
-            {/* Spotlight Button - Theme Toggle */}
-            <div className="hidden md:block">
-              <ThemeToggle />
-            </div>
 
             {/* Login Button */}
             <Button
@@ -153,11 +149,7 @@ const Header = () => {
               {t("header.contact")}
             </button>
 
-            <div className="pt-4 border-t border-border/50 space-y-3">
-              <div className="w-full">
-                <ThemeToggle />
-              </div>
-              
+            <div className="pt-4 border-t border-border/50">
               <Button
                 variant="outline"
                 size="sm"
