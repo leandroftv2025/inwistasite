@@ -56,6 +56,13 @@ const Investments = () => {
         <div className="text-center animate-fade-in">
           <Button
             size="lg"
+            onClick={() => {
+              // @ts-ignore - Botpress webchat global object
+              if (window.botpressWebChat) {
+                // @ts-ignore
+                window.botpressWebChat.sendEvent({ type: 'show' });
+              }
+            }}
             className="bg-primary dark:bg-[hsl(var(--turquoise-neon))] hover:bg-[hsl(var(--turquoise-neon))] dark:hover:bg-white text-white dark:text-primary dark:hover:text-primary transition-all hover:scale-105 shadow-glow"
           >
             {t("hero.learnMore")}

@@ -45,9 +45,16 @@ const Hero = () => {
                 {t("hero.downloadApp")}
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
               </Button>
-              <Button 
+              <Button
                 size="lg"
                 variant="outline"
+                onClick={() => {
+                  // @ts-ignore - Botpress webchat global object
+                  if (window.botpressWebChat) {
+                    // @ts-ignore
+                    window.botpressWebChat.sendEvent({ type: 'show' });
+                  }
+                }}
                 className="border-2 border-primary text-primary dark:border-[hsl(var(--turquoise-neon))] dark:text-white hover:bg-[hsl(var(--turquoise-neon))] hover:border-[hsl(var(--turquoise-neon))] hover:text-white dark:hover:bg-white dark:hover:text-primary dark:hover:border-white hover:scale-105 transition-all text-base sm:text-lg px-8 py-7 backdrop-blur-sm"
               >
                 {t("hero.learnMore")}

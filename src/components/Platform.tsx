@@ -81,8 +81,15 @@ const Platform = () => {
             
             {/* Button below menu on the right */}
             <div className="flex justify-end mt-8">
-              <Button 
+              <Button
                 size="lg"
+                onClick={() => {
+                  // @ts-ignore - Botpress webchat global object
+                  if (window.botpressWebChat) {
+                    // @ts-ignore
+                    window.botpressWebChat.sendEvent({ type: 'show' });
+                  }
+                }}
                 className="group bg-primary dark:bg-[hsl(var(--turquoise-neon))] hover:bg-[hsl(var(--turquoise-neon))] dark:hover:bg-white text-white dark:text-primary dark:hover:text-primary transition-all hover:scale-105 text-base px-8 py-6 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)] hover:shadow-glow"
               >
                 {t("platform.getCard")}
