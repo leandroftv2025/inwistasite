@@ -41,13 +41,13 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6">
             <button
-              onClick={() => scrollToSection("beneficios")}
+              onClick={() => scrollToSection("plataforma")}
               className="text-foreground/80 hover:text-[hsl(var(--turquoise-neon))] dark:hover:text-white transition-all hover:scale-105 font-medium"
             >
               {t("header.platform")}
             </button>
             <button
-              onClick={() => scrollToSection("plataforma")}
+              onClick={() => scrollToSection("beneficios")}
               className="text-foreground/80 hover:text-[hsl(var(--turquoise-neon))] dark:hover:text-white transition-all hover:scale-105 font-medium"
             >
               {t("header.card")}
@@ -121,13 +121,13 @@ const Header = () => {
         <div className="lg:hidden bg-card/95 backdrop-blur-xl border-t border-border/50 animate-fade-in">
           <nav className="container mx-auto px-4 py-6 flex flex-col space-y-4">
             <button
-              onClick={() => scrollToSection("beneficios")}
+              onClick={() => scrollToSection("plataforma")}
               className="text-foreground/80 hover:text-[hsl(var(--turquoise-neon))] dark:hover:text-white transition-colors text-left font-medium"
             >
               {t("header.platform")}
             </button>
             <button
-              onClick={() => scrollToSection("plataforma")}
+              onClick={() => scrollToSection("beneficios")}
               className="text-foreground/80 hover:text-[hsl(var(--turquoise-neon))] dark:hover:text-white transition-colors text-left font-medium"
             >
               {t("header.card")}

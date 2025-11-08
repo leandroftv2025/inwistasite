@@ -38,8 +38,9 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
-              <Button 
+              <Button
                 size="lg"
+                onClick={() => window.location.href = 'https://app.inwista.com'}
                 className="group bg-gradient-primary hover:opacity-90 hover:bg-[hsl(var(--turquoise-neon))] transition-all hover:scale-105 text-base sm:text-lg px-8 py-7 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)] hover:shadow-glow"
               >
                 {t("hero.downloadApp")}
@@ -48,13 +49,7 @@ const Hero = () => {
               <Button
                 size="lg"
                 variant="outline"
-                onClick={() => {
-                  // @ts-ignore - Botpress webchat global object
-                  if (window.botpressWebChat) {
-                    // @ts-ignore
-                    window.botpressWebChat.sendEvent({ type: 'show' });
-                  }
-                }}
+                onClick={() => window.open('https://cdn.botpress.cloud/webchat/v3.3/shareable.html?configUrl=https://files.bpcontent.cloud/2025/07/30/19/20250730192657-TWYHIX4W.json', '_blank')}
                 className="border-2 border-primary text-primary dark:border-[hsl(var(--turquoise-neon))] dark:text-white hover:bg-[hsl(var(--turquoise-neon))] hover:border-[hsl(var(--turquoise-neon))] hover:text-white dark:hover:bg-white dark:hover:text-primary dark:hover:border-white hover:scale-105 transition-all text-base sm:text-lg px-8 py-7 backdrop-blur-sm"
               >
                 {t("hero.learnMore")}

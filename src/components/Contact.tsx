@@ -52,6 +52,11 @@ const Contact = () => {
               <p className="text-foreground dark:text-white mb-6">{method.description}</p>
               <Button
                 variant="outline"
+                onClick={() => {
+                  if (index === 1) {
+                    window.open('https://cdn.botpress.cloud/webchat/v3.3/shareable.html?configUrl=https://files.bpcontent.cloud/2025/07/30/19/20250730192657-TWYHIX4W.json', '_blank');
+                  }
+                }}
                 className="border-primary dark:border-[hsl(var(--turquoise-neon))] text-primary dark:text-[hsl(var(--turquoise-neon))] hover:bg-[hsl(var(--turquoise-neon))] dark:hover:bg-white hover:text-white dark:hover:text-primary hover:border-[hsl(var(--turquoise-neon))] dark:hover:border-white hover:scale-105 transition-all"
               >
                 {method.action}
